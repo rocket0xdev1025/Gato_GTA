@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GATO — Grand Theft Gato VI</title>
+  <meta name="description" content="Vice City, USA. The furriest side of the sunniest place in America. Meet GATO — the cat on the ATM. Coming November 19, 2026. He's already there." />
+  <meta name="theme-color" content="#07080f" />
+
+  <!-- Open Graph (set og:image to an absolute URL once deployed) -->
+  <meta property="og:title" content="GATO — Grand Theft Gato VI" />
+  <meta property="og:description" content="The darkest side of the sunniest place in America has a cat. He's on the ATM. He's not moving." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/logo-256.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-256.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">Skip to Main Content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ LOADING SCREEN ============
+       Gates entry behind a click, which doubles as the user activation
+       browsers require before the theme music may start. -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__inner">
+      <img class="loader__logo" src="assets/title-display.png" alt="GATO — the GTA6 cat" width="871" height="383" />
+      <div class="loader__swap">
+        <div class="loader__meter" aria-hidden="true">
+          <div class="loader__bar"><span class="loader__fill" id="loaderFill"></span></div>
+          <p class="loader__pct"><span id="loaderPct">0</span>%</p>
+        </div>
+        <button class="btn btn--primary loader__enter" id="enterBtn" type="button" hidden>Enter Vice City</button>
+      </div>
+      <p class="loader__note" id="loaderNote">Waking the cat…</p>
+    </div>
+  </div>
+
+  <!-- ============ TOP BANNER ============ -->
+  <a class="ticker" href="#newswire" data-article="extended-nap">
+    <span class="ticker__label">An Extended Nap, Coming August 27</span>
+    <span class="ticker__arrow" aria-hidden="true">→</span>
+  </a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Homepage">
+      <img class="nav__cat" src="assets/logo-256.png" alt="" width="36" height="36" />
+      <span class="nav__word">Gato</span>
+      <span class="nav__vi" aria-hidden="true">VI</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#people">People &amp; Places</a>
+      <a href="#rapsheet">Rap Sheet</a>
+      <a href="#media">Media</a>
+      <a href="#newswire">Newswire</a>
+    </nav>
+
+    <div class="nav__actions">
+      <div class="nav__social" aria-label="Social">
+        <a href="#" data-social="x" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.4 8.5L23 22h-6.8l-5.3-6.9L4.8 22H1.7l7.9-9L1 2h7l4.8 6.3L18.9 2Zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20Z"/></svg></a>
+        <a href="#" data-social="youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 4 12 4 12 4s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.5 3 3 0 0 0 2.1 2.1C4.5 20 12 20 12 20s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.5ZM9.6 15.5v-7l6.2 3.5-6.2 3.5Z"/></svg></a>
+      </div>
+      <a class="btn btn--primary btn--sm js-buy" href="#propaganda">Pre-Purr Now</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Expand Navigation Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--pinned" id="top" data-bg="hero" data-bg-src="assets/bg/hero.jpg" data-bg-veil="center" data-bg-pos="center" data-bg-pos-m="68% center" data-fade="out">
+      <div class="hero__sticky">
+      <div class="hero__content">
+        <button class="medallion" id="medallion" type="button" aria-label="GATO. Do not press.">
+          <img src="assets/logo-1024.jpg" alt="GATO, a large brown tabby cat, staring straight at you." />
+          <span class="medallion__ring" aria-hidden="true"></span>
+        </button>
+
+        <h1 class="logo-mark">
+          <img class="logo-mark__img" src="assets/title-display.png" alt="GATO — the GTA6 cat" width="871" height="383" fetchpriority="high" />
+        </h1>
+
+        <p class="hero__tagline">The cat from the most significant gaming release ever is now on <strong>Solana</strong>.</p>
+
+        <!-- Contract address chip: value set in js/main.js (GATO.contract) -->
+        <button class="chip chip--ca" id="caChip" type="button" hidden>
+          <span class="chip__label">CA</span>
+          <span class="chip__text chip__mono" id="caText"></span>
+          <span class="chip__copy" aria-hidden="true">Copy</span>
+        </button>
+
+        <p class="hero__coming">
+          <span class="hero__coming-label">Coming</span>
+          <span class="hero__coming-date">November 19, 2026</span>
+          <span class="hero__coming-note">He's already there.</span>
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary js-buy" href="#propaganda">Pre-Purr Now</a>
+          <ul class="platforms" aria-label="Platforms">
+            <li>PlayStation 5</li>
+            <li>Xbox Series X|S</li>
+            <li>Top of the ATM</li>
+          </ul>
+        </div>
+
+        <div class="chip" id="atmChip">
+          <span class="chip__dot" aria-hidden="true"></span>
+          <span class="chip__text">On the ATM since May 6, 2025 — <strong><span id="daysOnAtm">—</span> days</strong>, <strong>0 moves</strong></span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#promo">
+        <span>Scroll for more content.</span>
+        <span class="scroll-cue__chevron" aria-hidden="true"></span>
+      </a>
+      </div>
+    </section>
+
+    <!-- ============ PROMO — sticky title over a pinned key-art layer ============ -->
+    <section class="promo" id="promo" data-bg="cast" data-bg-src="assets/bg/cast.jpg" data-bg-veil="soft" data-bg-pos="center 25%" data-bg-pos-m="50% 25%" data-fade="inout">
+      <div class="promo__sticky">
+        <p class="eyebrow">Only on the ATM</p>
+        <h2 class="promo__title">An Extended Nap</h2>
+        <p class="promo__meta"><span class="brand">GATO</span><span class="sep">|</span><span>August 27</span><span class="sep">|</span><span>3 PM ET</span></p>
+        <button class="btn btn--ghost" id="remindBtn" type="button">Remind Me</button>
+      </div>
+    </section>
+
+    <!-- ============ TRAILERS (reuse scene renders) ============ -->
+    <section class="cards cards--over" id="trailers" data-bg="cast" data-bg-src="assets/bg/cast.jpg" data-bg-veil="soft" data-bg-pos="center 25%" data-bg-pos-m="50% 25%">
+      <a class="card card--video reveal" href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank" rel="noopener" style="--tint:#2c3868">
+        <div class="card__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/taxi.jpg'); background-position:68% center"></div>
+        <div class="card__body">
+          <span class="card__kicker">Watch</span>
+          <span class="card__title">Trailer 2</span>
+          <span class="card__sub">Featuring four seconds of Gato. Worth it.</span>
+        </div>
+        <span class="card__play" aria-hidden="true"></span>
+      </a>
+      <a class="card card--video reveal" href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener" style="--tint:#1f1f38">
+        <div class="card__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/docks.jpg'); background-position:74% center"></div>
+        <div class="card__body">
+          <span class="card__kicker">Watch</span>
+          <span class="card__title">Trailer 1</span>
+          <span class="card__sub">Zero cats. Skip to Trailer 2.</span>
+        </div>
+        <span class="card__play" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============ EDITIONS (reuse scene renders) ============ -->
+    <section class="cards cards--over cards--editions" data-bg="beach" data-bg-src="assets/bg/beach.jpg" data-bg-veil="soft" data-bg-pos="center 35%" data-bg-pos-m="55% 30%">
+      <article class="card card--tall card--art reveal" style="--tint:#4b2f54">
+        <div class="card__body">
+          <span class="card__kicker">Ultimate Edition</span>
+          <span class="card__title">Ultimate Gato Edition</span>
+          <p class="card__text">An exclusive collection of items threaded across all aspects of Gato's story: one ATM, one counter, one clerk who thinks he's in charge.</p>
+          <a class="link" href="#rapsheet">Learn More</a>
+        </div>
+        <img class="card__art" src="assets/bg/boxart.jpg" alt="Ultimate Gato Edition box art: Gato on the ATM surrounded by Vice City vignettes." loading="lazy" />
+      </article>
+      <article class="card card--tall reveal" style="--tint:#3d2f27">
+        <div class="card__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/vintage.jpg'); background-position:60% center"></div>
+        <div class="card__body">
+          <span class="card__kicker">Pre-Purr Bonuses</span>
+          <span class="card__title">Vintage Mice City Pack</span>
+          <p class="card__text">Pre-purr to get unique benefits that flash back to when the catnip burned brightest.</p>
+          <a class="link js-buy" href="#propaganda">Learn More</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ STORY (reuses hero render, veiled) ============ -->
+    <section class="story scene" id="story" style="--tint:#0c0d1b" data-bg="walk" data-bg-src="assets/bg/walk-poster.jpg" data-bg-src-m="assets/bg/walk-poster-m.jpg" data-bg-frames="assets/seq/walk/{i}.jpg" data-bg-frames-m="assets/seq/walk-m/{i}.jpg" data-bg-frame-count="160" data-bg-frame-pad="4" data-bg-veil="none">
+      <div class="story__veil" aria-hidden="true"></div>
+      <div class="story__content reveal">
+        <h2 class="story__title">Vice City, USA.</h2>
+        <p class="story__lede">
+          Gato has always known the counter is his. But when an easy score goes wrong — a tuna truck, a bad clerk, a beer run that took four seconds too long — he finds himself on the darkest side of the sunniest place in America, in the middle of a criminal conspiracy stretching across every bodega in the state of Leonida — forced to rely on all nine lives if he wants to make it out alive.
+        </p>
+        <p class="story__kicker">Or at least make it to dinner.</p>
+      </div>
+    </section>
+
+    <!-- ============ WALK — scroll-scrubbed video: scroll = he walks, scroll back = he walks back ============ -->
+    <section class="walkcut" id="walk" data-bg="walk" data-fade="inout">
+      <div class="walkcut__sticky">
+        <p class="eyebrow">Vice City, USA.</p>
+        <h2 class="walkcut__title">He walks it like he owns it.</h2>
+        <p class="walkcut__hint">Scroll to walk him. Scroll up — he walks it back.</p>
+      </div>
+    </section>
+
+    <!-- ============ PEOPLE & PLACES ============ -->
+    <section class="people" id="people">
+      <header class="people__intro reveal">
+        <p class="eyebrow">Only in Leonida</p>
+        <p class="people__quote">When the sun fades and the neon glows, everyone has something to gain — and one of them has nine lives.</p>
+      </header>
+
+      <!-- GATO -->
+      <article class="scene scene--right" id="gato" style="--tint:#1f1f38; --accent:#d9d1f6" data-bg="gato" data-bg-src="assets/bg/gato.jpg" data-bg-veil="right" data-bg-tint="#1f1f38" data-bg-pos="30% center" data-bg-pos-m="40% 30%">
+        <div class="scene__content reveal">
+          <h2 class="scene__name">Gato</h2>
+          <p class="scene__tag">Gato doesn't want an easy life. He already has one.</p>
+          <p>Nobody knows where Gato came from. One morning he was on top of the ATM at a Vice City liquor store, and the store has been his ever since. The clerk thinks he owns the place. The clerk is wrong.</p>
+          <p class="scene__pull">Another day in paradise, right? His paradise.</p>
+          <p>Everyone in Leonida walks through that door eventually — grifters, crooks, a guy named Jason buying beer. Gato doesn't move for any of them. He never does. That's how you know who's really in charge.</p>
+          <a class="link" href="#loc-store">Explore The Store</a>
+        </div>
+      </article>
+
+      <!-- HECTOR MARIN -->
+      <article class="scene scene--left" id="hector" style="--tint:#243830; --accent:#f0ff9e" data-bg="hector" data-bg-src="assets/bg/hector.jpg" data-bg-veil="left" data-bg-tint="#243830" data-bg-pos="left center" data-bg-pos-m="75% 30%">
+        <div class="scene__content reveal">
+          <h2 class="scene__name">Hector Marin</h2>
+          <p class="scene__tag">What if everything in the store was his? It isn't.</p>
+          <p>Hector runs the register, restocks the Sprunk, mops the floor, and locks up at 2 AM. He's the manager. He's been the manager for eleven years. He has never once managed the cat.</p>
+          <p class="scene__pull">The cat's in charge. Get used to it.</p>
+          <p>He's tried moving Gato off the ATM twice. Both times the security footage went missing. Hector doesn't try anymore. Casual denial loves company, and the regulars keep him company.</p>
+          <a class="link" href="#loc-kalaga">Explore Mount Kalaga</a>
+        </div>
+      </article>
+
+      <!-- JASON & LUCIA -->
+      <article class="scene scene--right" id="humans" style="--tint:#262e5b; --accent:#b8e8ff" data-bg="humans" data-bg-src="assets/bg/humans.jpg" data-bg-veil="right" data-bg-tint="#262e5b" data-bg-pos="right center" data-bg-pos-m="25% 30%">
+        <div class="scene__content reveal">
+          <p class="eyebrow eyebrow--inline">Background Characters</p>
+          <h2 class="scene__name">Jason &amp; Lucia</h2>
+          <p class="scene__tag">The humans want an easy life. Things just keep getting furrier.</p>
+          <p>A pair of recurring background characters. Jason comes in for beer roughly once per trailer. Lucia waits in the car. Neither of them has ever acknowledged the ATM. Gato has acknowledged them.</p>
+          <p class="scene__pull">Meeting Gato could be the best or worst thing to ever happen to them. They haven't noticed yet.</p>
+          <p>Rumor has it they're the protagonists of something. Gato isn't worried. He's in every scene that matters, and he's never had to run from anyone.</p>
+          <a class="link" href="#loc-keys">Explore Leonida Keys</a>
+        </div>
+      </article>
+
+                  <div class="coming reveal">
+        <p class="coming__big">Coming<br />November 19<br />2026</p>
+        <p class="coming__note">He's already there.</p>
+      </div>
+    </section>
+
+    <!-- ============ LOCATIONS (reuse scene renders) ============ -->
+    <section class="locations" id="locations">
+      <header class="section-head reveal">
+        <p class="eyebrow">Only in Leonida</p>
+        <h2 class="section-head__title">Home to the neon-soaked streets of Vice City and beyond.</h2>
+      </header>
+
+      <div class="loc-grid">
+        <a class="loc reveal" id="loc-store" href="#gato" style="--tint:#1f1f38">
+          <div class="loc__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/loc-store.jpg')"></div>
+          <div class="loc__body">
+            <span class="loc__name">The Store</span>
+            <span class="loc__text">Officially it has a name. Nobody uses it. Beer, lotto, one ATM. Occupied.</span>
+          </div>
+        </a>
+        <a class="loc reveal" id="loc-vicecity" href="#gato" style="--tint:#3a2545">
+          <div class="loc__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/loc-vicecity.jpg')"></div>
+          <div class="loc__body">
+            <span class="loc__name">Vice City</span>
+            <span class="loc__text">Neon-soaked streets, sun-bleached beaches, and one cat who owns all of it.</span>
+          </div>
+        </a>
+        <a class="loc reveal" id="loc-keys" href="#humans" style="--tint:#262e5b">
+          <div class="loc__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/loc-keys.jpg')"></div>
+          <div class="loc__body">
+            <span class="loc__name">Leonida Keys</span>
+            <span class="loc__text">Where the humans live and the boats disappear.</span>
+          </div>
+        </a>
+        <a class="loc reveal" id="loc-gellhorn" href="#gato" style="--tint:#2a2a33">
+          <div class="loc__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/loc-gellhorn.jpg')"></div>
+          <div class="loc__body">
+            <span class="loc__name">Port Gellhorn</span>
+            <span class="loc__text">Where the tuna comes in. Every crate gets inspected. By him.</span>
+          </div>
+        </a>
+        <a class="loc reveal" id="loc-kalaga" href="#hector" style="--tint:#243830">
+          <div class="loc__bg scene__bg" aria-hidden="true" style="background-image:url('assets/bg/loc-kalaga.jpg')"></div>
+          <div class="loc__body">
+            <span class="loc__name">Mount Kalaga</span>
+            <span class="loc__text">Where Hector goes to scream on his day off. No ATM. Gato has no interest.</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ RAP SHEET ============ -->
+    <section class="rapsheet" id="rapsheet">
+      <header class="section-head reveal">
+        <p class="eyebrow">Leonida State Police</p>
+        <h2 class="section-head__title">Wanted</h2>
+        <p class="section-head__sub">Subject remains at large. Subject remains on the ATM. These are the same fact.</p>
+      </header>
+
+      <div class="rapsheet__grid">
+        <figure class="mugshot reveal">
+          <div class="mugshot__frame">
+            <img src="assets/logo-1024.jpg" alt="Booking photo of GATO. He is not cooperating." />
+          </div>
+          <figcaption>
+            <span class="mugshot__id">LSPD #0000-VI-ATM</span>
+            <span class="mugshot__name">"Gato"</span>
+            <span class="mugshot__stars" id="wantedStars" aria-label="Wanted level: six of six">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </span>
+          </figcaption>
+        </figure>
+
+        <div class="charges reveal">
+          <h3 class="charges__title">Charges</h3>
+          <ol class="charges__list">
+            <li><span>Grand Theft Gato</span><em>Felony · Ongoing</em></li>
+            <li><span>Obstruction of an ATM</span><em>2,847 counts</em></li>
+            <li><span>Aggravated Loitering</span><em>Commercial zone</em></li>
+            <li><span>Assault with a Deadly Paw</span><em>Alleged</em></li>
+            <li><span>Reckless Napping</span><em>Repeat offender</em></li>
+            <li><span>Intimidation of a Store Manager</span><em>11 years, continuous</em></li>
+            <li><span>Possession of Catnip with Intent to Ignore</span><em>Dismissed. He didn't care.</em></li>
+          </ol>
+
+          <dl class="stats">
+            <div><dt>Height</dt><dd>Counter level</dd></div>
+            <div><dt>Weight</dt><dd>Big</dd></div>
+            <div><dt>Eyes</dt><dd>Judging</dd></div>
+            <div><dt>Aliases</dt><dd>El Gato, Señor, Sir</dd></div>
+            <div><dt>Last Seen</dt><dd>On the ATM</dd></div>
+            <div><dt>Bounty</dt><dd>6 treats (unclaimed)</dd></div>
+            <div><dt>Confirmed Kills</dt><dd>0</dd></div>
+            <div><dt>Confirmed Moves</dt><dd>0</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEDIA ============ -->
+    <section class="media" id="media">
+      <header class="section-head reveal">
+        <p class="eyebrow">Downloads</p>
+        <h2 class="section-head__title">Media &amp; Artwork</h2>
+        <p class="section-head__sub">Download and share unofficial screenshots, wallpapers, and the same four seconds of footage.</p>
+      </header>
+
+      <div class="media-grid" id="mediaGrid">
+        <a class="tile reveal" href="assets/logo.png" download data-src="assets/logo-1024.jpg"><span class="tile__label">Official Portrait</span></a>
+        <a class="tile tile--wide reveal" href="assets/bg/hero.jpg" download data-src="assets/bg/hero.jpg"><span class="tile__label">The Store, Night</span></a>
+        <a class="tile tile--portrait reveal" href="assets/gta-cat.png" download data-src="assets/gta-cat.png"><span class="tile__label">The Original Frame</span></a>
+        <a class="tile tile--more reveal" href="assets/bg/gato.jpg" download data-src="assets/bg/gato.jpg"><span class="tile__label">Gato</span></a>
+        <a class="tile tile--more reveal" href="assets/bg/hector.jpg" download data-src="assets/bg/hector.jpg"><span class="tile__label">Hector Marin</span></a>
+        <a class="tile tile--more tile--wide reveal" href="assets/bg/humans.jpg" download data-src="assets/bg/humans.jpg"><span class="tile__label">The Humans</span></a>
+        <a class="tile tile--more reveal" href="assets/bg/boxart.jpg" download data-src="assets/bg/boxart.jpg"><span class="tile__label">Box Art</span></a>
+        <a class="tile tile--more reveal" href="assets/bg/cast.jpg" download data-src="assets/bg/cast.jpg"><span class="tile__label">The Store Crew</span></a>
+        <a class="tile tile--more tile--wide reveal" href="assets/bg/club.jpg" download data-src="assets/bg/club.jpg"><span class="tile__label">The Club</span></a>
+        <a class="tile tile--more tile--wide reveal" href="assets/bg/party.jpg" download data-src="assets/bg/party.jpg"><span class="tile__label">Block Party</span></a>
+        <a class="tile tile--more tile--wide reveal" href="assets/bg/vintage.jpg" download data-src="assets/bg/vintage.jpg"><span class="tile__label">Mice City, 1986</span></a>
+        <a class="tile tile--more tile--wide reveal" href="assets/bg/beach.jpg" download data-src="assets/bg/beach.jpg"><span class="tile__label">Vice Beach</span></a>
+        <a class="tile tile--more reveal" href="assets/bg/docks.jpg" download data-src="assets/bg/docks.jpg"><span class="tile__label">The Port</span></a>
+        <a class="tile tile--more reveal" href="assets/bg/taxi.jpg" download data-src="assets/bg/taxi.jpg"><span class="tile__label">Night Fare</span></a>
+      </div>
+      <div class="media__actions">
+        <button class="btn btn--ghost" id="mediaToggle" type="button" aria-expanded="false" aria-controls="mediaGrid">Show all artwork</button>
+      </div>
+    </section>
+
+    <!-- ============ NEWSWIRE ============ -->
+    <section class="newswire" id="newswire">
+      <header class="section-head section-head--row reveal">
+        <h2 class="section-head__title">Featured News</h2>
+        <a class="link" href="#newswire" id="newsAll">View all Newswire posts</a>
+      </header>
+
+      <ul class="news">
+        <li class="news__item reveal">
+          <a href="#newswire" data-article="extended-nap">
+            <span class="news__title">Gato: An Extended Nap</span>
+            <time datetime="2026-08-06">August 6, 2026</time>
+          </a>
+        </li>
+        <li class="news__item reveal">
+          <a href="#propaganda" data-article="pre-purr">
+            <span class="news__title">Pre-Purr Gato on June 25</span>
+            <time datetime="2026-06-24">June 24, 2026</time>
+          </a>
+        </li>
+        <li class="news__item reveal">
+          <a href="#gato" data-article="nov-19">
+            <span class="news__title">Gato Is Now Set to Move Off the ATM November 19, 2026 (He Won't)</span>
+            <time datetime="2025-11-06">November 6, 2025</time>
+          </a>
+        </li>
+        <li class="news__item reveal">
+          <a href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank" rel="noopener" data-article="trailer-2">
+            <span class="news__title">Cat Spotted on ATM in Trailer 2; Internet Loses Its Mind</span>
+            <time datetime="2025-05-06">May 6, 2025</time>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ PROPAGANDA ============ -->
+    <section class="propaganda" id="propaganda">
+      <div class="propaganda__inner reveal">
+        <h2 class="propaganda__title">Get Bodega Propaganda</h2>
+        <p class="propaganda__text">Get the latest naps, updates on special treats and offers, and much more from Gato.</p>
+        <form class="signup" id="signup" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+          <button class="btn btn--primary" type="submit">Sign Up</button>
+        </form>
+        <p class="signup__msg" id="signupMsg" role="status" aria-live="polite"></p>
+
+        <ul class="socials" aria-label="Social">
+          <li><a href="#" data-social="x" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.4 8.5L23 22h-6.8l-5.3-6.9L4.8 22H1.7l7.9-9L1 2h7l4.8 6.3L18.9 2Zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20Z"/></svg></a></li>
+          <li><a href="#" data-social="youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 4 12 4 12 4s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.5 3 3 0 0 0 2.1 2.1C4.5 20 12 20 12 20s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.5ZM9.6 15.5v-7l6.2 3.5-6.2 3.5Z"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#top">Litter Box</a>
+        <a href="#">Privacy</a>
+        <a href="#" id="cookieLink">Cookie Settings</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Legal</a>
+        <a href="#">Do Not Sell or Share My Personal Information</a>
+      </nav>
+
+      <div class="rating">
+        <div class="rating__box" aria-hidden="true">
+          <span class="rating__letter">C</span>
+          <span class="rating__word">Cat</span>
+        </div>
+        <p>May contain content inappropriate for dogs.<br />Visit your nearest bodega for rating information.</p>
+      </div>
+
+      <p class="footer__legal">
+        GATO is a fan-made parody. Not affiliated with, endorsed by, or associated with Rockstar Games or Take-Two Interactive. Grand Theft Auto and all related marks belong to their respective owners. Nothing here is financial advice — he's a cat. No cats were moved in the making of this website. He wouldn't allow it.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ NEWSWIRE ARTICLE READER ============
+       Content lives in js/main.js (NEWS); opened by [data-article] links. -->
+  <div class="article" id="article" role="dialog" aria-modal="true" aria-labelledby="articleTitle" hidden>
+    <div class="article__scrim" data-article-close></div>
+    <div class="article__panel" id="articlePanel">
+      <button class="article__close" data-article-close aria-label="Close article" type="button">×</button>
+      <img class="article__img" id="articleImg" src="" alt="" />
+      <div class="article__body">
+        <p class="eyebrow" id="articleKicker"></p>
+        <h2 class="article__title" id="articleTitle"></h2>
+        <time class="article__date" id="articleDate"></time>
+        <div class="article__text" id="articleText"></div>
+        <div class="article__links" id="articleLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ THEME MUSIC ============ -->
+  <audio id="theme" src="assets/musictheme-web.mp3" loop preload="auto" playsinline></audio>
+  <button class="sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Mute music" title="Mute music" hidden>
+    <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="sound__slash" aria-hidden="true"></span>
+  </button>
+  <!-- shown only while the browser is still blocking audio; scrolling can't unlock it -->
+  <button class="soundhint" id="soundHint" type="button" hidden>Tap for sound</button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/scroll-fx.js"></script>
+</body>
+</html>
