@@ -8,7 +8,7 @@
      ===================================================================== */
   const GATO = {
     ticker: '$GATO',
-    contract: 'TBA',
+    contract: '0x3c922d7922dd5223a39cf3702a5d9303c1db4dc7',
     buy: '',                 // e.g. DEX / launchpad URL — all "Pre-Purr Now" buttons link here when set
     socials: {
       x: 'https://x.com/gta6catgato',
