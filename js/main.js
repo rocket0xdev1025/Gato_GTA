@@ -8,11 +8,11 @@
      ===================================================================== */
   const GATO = {
     ticker: '$GATO',
-    contract: 'HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump',
+    contract: 'TBA',
     buy: '',                 // e.g. DEX / launchpad URL — all "Pre-Purr Now" buttons link here when set
     socials: {
-      x: 'https://x.com/TheGTA6cat',
-      telegram: '',
+      x: 'https://x.com/gta6catgato',
+      telegram: 'https://t.me/gta6catgato',
       instagram: '',
       youtube: '',
       tiktok: '',
@@ -298,7 +298,7 @@
       body: [
         'Beginning June 25, you will be able to Pre-Purr Gato — the act of committing, in advance, to a cat who has committed to nothing.',
         'The Standard Edition includes Gato. The Ultimate Gato Edition includes Gato, a deluxe sense of superiority, and the Vintage Mice City Pack — a flashback to 1986, when the catnip burned brightest and the mice were plentiful.',
-        'Those who Pre-Purr will receive no early access of any kind, because he is a cat, and he is already there. What you are purchasing is the feeling. The feeling is real. It lives on Solana.',
+        'Those who Pre-Purr will receive no early access of any kind, because he is a cat, and he is already there. What you are purchasing is the feeling. The feeling is real. It lives on Ethereum.',
         'Physical editions were considered. He knocked them off the shelf.',
       ],
       links: [{ label: 'Pre-Purr Now', href: '#propaganda' }],
@@ -329,7 +329,7 @@
         'On May 6, 2025, the second trailer for the most significant gaming release ever ran for two minutes and forty-eight seconds. For roughly one of those seconds, a brown tabby cat sat on an ATM inside a Leonida bodega. The trailer has been viewed hundreds of millions of times. We are confident the cat is the reason.',
         'Within hours, the frame had been isolated, enhanced, printed, and argued about. Names were proposed. Petitions were started. A man in Ohio claimed it was his cat. It was not his cat.',
         'The community settled on Gato — because he is a cat, and that is the word for cat. He has since become the calmest thing ever associated with Vice City, and the only resident whose record is entirely misdemeanors.',
-        'Gato now lives on Solana, where he continues to sit completely still while everything around him moves very fast.',
+        'Gato now lives on Ethereum, where he continues to sit completely still while everything around him moves very fast.',
       ],
       links: [
         { label: 'Watch Trailer 2', href: 'https://www.youtube.com/watch?v=VQRLujxTm3c', external: true },
