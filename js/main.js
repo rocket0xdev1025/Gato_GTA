@@ -41,7 +41,7 @@
       a.href = GATO.buy;
       a.target = '_blank';
       a.rel = 'noopener';
-    });
+    }); 
   }
   const caChip = $('#caChip');
   const caText = $('#caText');
